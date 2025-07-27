@@ -27,9 +27,9 @@ class formula_calculate extends mol_calculate {
         return mol_gas;
     }
 }
-class input_infor_mm extends mol_calculate{ //INPUT HERE
-    private final double mass = 30;
-    private final double molecular_mass = 60;
+class input_infor_mm extends mol_calculate{ 
+    private final double mass = 30; //INPUT HERE
+    private final double molecular_mass = 60; //INPUT HERE
 
     public double get_mM(){
         return mass;
@@ -39,16 +39,16 @@ class input_infor_mm extends mol_calculate{ //INPUT HERE
     }
 }
 
-class input_infor_mv extends mol_calculate{ //INPUT HERE
-    private final double volume = 33.6;
+class input_infor_mv extends mol_calculate{
+    private final double volume = 33.6; //INPUT HERE
     
     public double get_mV(){
         return volume;
     }
 }
 
-class input_infor_mg extends mol_calculate{ //INPUT HERE
-    private final double atom = 24.08 * Math.pow(10,23);
+class input_infor_mg extends mol_calculate{
+    private final double atom = 24.08 * Math.pow(10,23); //INPUT HERE
 
     public double get_mG(){
         return atom;
@@ -61,7 +61,7 @@ class mol_calculate {
         formula_calculate mm = new formula_calculate();
 
         mm.setMolMass((imm.get_mM()) / (imm.get_mW()));
-        System.out.printf("Mol is %.2f%n", mm.getMolMass());
+        System.out.printf("Mol is %.3f%n", mm.getMolMass());
     }
 
     public void volume() {
@@ -69,7 +69,7 @@ class mol_calculate {
         formula_calculate mv = new formula_calculate();
 
         mv.setMolVolume((imv.get_mV()) / 22.4);
-        System.out.printf("Mol is %.2f%n", mv.getMolVolume());
+        System.out.printf("Mol is %.3f%n", mv.getMolVolume());
     }
 
     public void atom() {
@@ -77,6 +77,6 @@ class mol_calculate {
         formula_calculate mg = new formula_calculate();
 
         mg.setMolGas((img.get_mG()) / (6.02 * Math.pow(10, 23)));
-        System.out.printf("Mol is %.2f%n", mg.getMolGas());
+        System.out.printf("Mol is %.3f%n", mg.getMolGas());
     }
 }
