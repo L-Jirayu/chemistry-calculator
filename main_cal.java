@@ -1,6 +1,6 @@
 public class main_cal {
     public static void main(String[] args) {
-        int select = 2;
+        int select = 1; //INPUT HERE
         
         switch (select) {
             case 1 -> {
@@ -12,9 +12,11 @@ public class main_cal {
             }
             case 2 -> {
                 System.out.println("Molarlity and Molality Calculator");
-                inten_solu_calculate isc = new inten_solu_calculate();
-                isc.molar();
-                isc.molal();
+                inten_solu_calculate isc1 = new molar_calc();
+                isc1.runCalculation();
+
+                inten_solu_calculate isc2 = new molal_calc();
+                isc2.runCalculation();
             }
             default -> System.out.println("F.");
         }
