@@ -10,9 +10,9 @@ class molar_calc extends inten_solu_calculate {
     private double mole_mlar;
     private double volume;
 
-    private void input_molar() { //INPUT HERE
-        mole_mlar = 2.0;
-        volume = 24;
+    private void input_molar() { 
+        mole_mlar = 2.0; //INPUT HERE
+        volume = 24; //INPUT HERE
     }
 
     @Override
@@ -27,9 +27,9 @@ class molal_calc extends inten_solu_calculate {
     private double mole_mlal;
     private double mass_solution;
 
-    private void input_molal() { //INPUT HERE
-        mole_mlal = 2.0;
-        mass_solution = 12;
+    private void input_molal() { 
+        mole_mlal = 2.0; //INPUT HERE
+        mass_solution = 12; //INPUT HERE
     }
 
     @Override
