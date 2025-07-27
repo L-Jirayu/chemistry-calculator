@@ -1,43 +1,41 @@
-class inten_solu_calculate{
-    public void molar(){
-        molar_calc mc = new molar_calc();
-        mc.molar_formula();
-    }
+abstract class inten_solu_calculate {
+    public abstract void calculate();
 
-    public void molal(){
-        molal_calc ml = new molal_calc();
-        ml.molal_formula();
+    public void runCalculation() {
+        this.calculate();
     }
 }
 
-class molar_calc extends inten_solu_calculate{
-    double mole_mlar;
-    double volume;
-    void input_molar(){
+class molar_calc extends inten_solu_calculate {
+    private double mole_mlar;
+    private double volume;
+
+    private void input_molar() { //INPUT HERE
         mole_mlar = 2.0;
         volume = 24;
     }
 
-    void molar_formula(){
+    @Override
+    public void calculate() {
         input_molar();
-        double molar = mole_mlar/volume;
+        double molar = mole_mlar / volume;
         System.out.printf("Molarity is %.3f mol/l\n", molar);
     }
 }
 
-class molal_calc extends inten_solu_calculate{
+class molal_calc extends inten_solu_calculate { 
+    private double mole_mlal;
+    private double mass_solution;
 
-    double mole_mlal;
-    double mass_solution;
-
-    void input_molal(){
+    private void input_molal() { //INPUT HERE
         mole_mlal = 2.0;
         mass_solution = 12;
     }
 
-    void molal_formula(){
+    @Override
+    public void calculate() {
         input_molal();
-        double molal = mole_mlal/mass_solution;
+        double molal = mole_mlal / mass_solution;
         System.out.printf("Molality is %.3f mol/kg\n", molal);
     }
 }
